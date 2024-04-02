@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-
-import { images } from "../../constants";
+import { motion } from "framer-motion";
 import "../Css/About.css";
 import { urlFor, client } from "../../client";
 import { AppWrap, MotionWrap } from "../../wrapper";

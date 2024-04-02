@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -75,7 +75,7 @@ const Work = () => {
                   href={work.projectLink}
                   aria-label={`View ${work.title}`}
                   target="_blank"
-                  rel="norefer"
+                  rel="noreferrer"
                 >
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
@@ -89,7 +89,12 @@ const Work = () => {
                   </motion.div>
                 </a>
 
-                <a href={work.codeLink} aria-label={`Code link ${work.title}`} target="_blank" rel="norefer">
+                <a
+                  href={work.codeLink}
+                  aria-label={`Code link ${work.title}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
