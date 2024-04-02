@@ -1,0 +1,214 @@
+.app__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 2rem;
+  padding-bottom: 0 !important;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  z-index: 2;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.app__navbar-logo img {
+  width: 90px;
+  height: 20px;
+}
+@media screen and (min-width: 2000px) {
+  .app__navbar-logo img {
+    width: 180px;
+    height: 40px;
+  }
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin-top: 5px !important;
+  margin-bottom: 0.75rem !important;
+}
+.app__navbar-links li {
+  margin: 0 1rem;
+  cursor: pointer;
+  flex-direction: column;
+}
+.app__navbar-links li div {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: transparent;
+  margin-bottom: 5px;
+}
+.app__navbar-links li a {
+  color: var(--gray-color);
+  text-decoration: none;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+.app__navbar-links li a:hover {
+  color: var(--secondary-color);
+}
+.app__navbar-links li:hover div {
+  background-color: var(--secondary-color);
+}
+@media screen and (max-width: 900px) {
+  .app__navbar-links {
+    display: none;
+  }
+}
+
+.app__navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  margin-left: 1.5rem;
+}
+.app__navbar-menu svg {
+  width: 70%;
+  height: 70%;
+  color: var(--white-color);
+}
+.app__navbar-menu div {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  padding: 1rem;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  background: url("../../assets/bgWhite.png");
+  background-color: var(--white-color);
+  background-size: cover;
+  background-repeat: repeat;
+  box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+}
+.app__navbar-menu div svg {
+  width: 35px;
+  height: 25px;
+  color: var(--secondary-color);
+  margin: 0.5rem 1rem;
+}
+.app__navbar-menu div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.app__navbar-menu div ul li {
+  margin: 1rem;
+}
+.app__navbar-menu div ul li a {
+  color: var(--gray-color);
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.app__navbar-menu div ul li a:hover {
+  color: var(--secondary-color);
+}
+@media screen and (min-width: 900px) {
+  .app__navbar-menu div {
+    display: none;
+  }
+}
+@media screen and (min-width: 900px) {
+  .app__navbar-menu {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
+    #darkModeToggle{
+    height: 85% !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 2px;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    
+  }
+  .icon{
+    margin-right: 0 !important;
+  }
+}
+
+
+
+
+.dropdown-text {
+  margin-left: 8px;
+  font-size: 12px; 
+}
+
+.icon {
+  width: 20px; 
+  height: 20px; 
+  margin-right: 8px; 
+  color: var(--DarkModeSwitcher) !important;
+}
+.dropdown-item{
+  margin-left: 5px;
+  margin-right: 5px;
+  width: auto !important;
+  color: var(--DarkModeSwitcher) !important;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: var(--DMSwitcher-color) !important;
+  border-radius: 5px;
+}
+
+.checkmark {
+  margin-left: 1rem;
+}
+.dd{
+  background-color: transparent !important;
+  color: var(--DarkModeSwitcher) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+#darkModeToggle{
+  border-color: none !important;
+  
+}
+.dm {
+  background-color: rgba(255, 255, 255, 0.05)!important;;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;  
+}
+.flex_sort {
+  display: flex;
+}
+/*# sourceMappingURL=Navbar.css.map */

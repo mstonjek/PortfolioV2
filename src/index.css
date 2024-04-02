@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --font-base: "DM Sans", sans-serif;
+
+  --primary-color: #edf2f8;
+  --secondary-color: #313bac;
+  --onhover-color: #c2d4ec;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #6b7688;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+  --dots-color: aliceblue;
+  --bg-src: url("./assets/bgIMG.png");
+  --logo-src: url("./assets/logo.png");
+  --DarkModeSwitcher: #000;
+  --DMSwitcher-color: #c6c7c8;
+  --BoxShadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  --Span-color: #313bac;
+  --Testimonial-title: #313bac;
+  --Contact-card: #fef4f5;
+  --Contact-text: #030303;
+  --onhover-contact: #c2d4ec;
+  --ContactCardText: #030303;
+  --ButtonContact: #313bac;
+  --ButtonBg-color: #c2d4ec;
+  --ButtonHover: #ffd700;
+  --ContactLinkColor: #313bac;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root.dark-mode {
+  --primary-color: #2e3440;
+  --secondary-color: #88c0d0;
+  --onhover-color: #280e27;
+  --black-color: #88c0d0; 
+  --lightGray-color: #e4e4e4; 
+  --gray-color: #e4e4e4; 
+  --brown-color: #8b4513; 
+  --white-color: #2c3e50; 
+  --dots-color: none; 
+  --bg-src: none;
+  --DarkModeSwitcher: #e4e4e4;
+  --DMSwitcher-color: #88c0d0;
+  --BoxShadow: none;
+  --Span-color: #fff;
+  --Testimonial-title: #ffd700;
+  --Contact-card: #c2d4ec;
+  --Contact-text: #e4e4e4;
+  --onhover-contact: #ffd700;
+  --ContactCardText: #030303;
+  --ButtonContact: #c2d4ec;
+  --ButtonHover: #ffd700;
+  --ButtonBg-color: #c2d4ec;
+  --ContactLinkColor: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+#home {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: var(--bg-src);
 }
