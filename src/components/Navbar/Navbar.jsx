@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { BsBrightnessHighFill, BsCheck2 } from "react-icons/bs";
 import useDarkMode from "./useDarkMode.jsx";
 import { WiMoonAltThirdQuarter } from "react-icons/wi";
@@ -14,11 +14,8 @@ const Navbar = () => {
   const {
     isDarkMode,
     isAutoMode,
-    toggleDarkMode,
-    toggleAutoMode,
     changeMode,
   } = useDarkMode();
-  const [isToggleOpen, setToggleOpen] = React.useState(false);
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -26,7 +23,7 @@ const Navbar = () => {
       <div className="app__navbar-logo">
         {isDarkMode ? (
           <a href="https://www.mstonjek.cz">
-            <img src={images.logoDark} alt="logo" />
+            <img src={images.logoDark} aria-label="Toggle Dark Mode" alt="logo" />
           </a>
         ) : (
           <a href="https://www.mstonjek.cz">
@@ -44,7 +41,7 @@ const Navbar = () => {
       </ul>
       <div className="flex_sort">
         <Dropdown className="dropdownheight">
-          <Dropdown.Toggle className="dd" variant="light" id="darkModeToggle">
+          <Dropdown.Toggle className="dd" variant="light" id="darkModeToggle" aria-label="Toggle Dark Mode">
             {isDarkMode ? <HiMoon className="icon" /> : null}
             {!isDarkMode && !isAutoMode ? (
               <BsBrightnessHighFill className="icon" />

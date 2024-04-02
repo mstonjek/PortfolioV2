@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { React } from "react";
+import { motion } from "framer-motion";
 
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
@@ -18,26 +18,6 @@ const scaleVariants = {
 };
 
 const Header = () => {
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
-
-  // Funkce pro generování náhodného čísla
-  const getRandomInt = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
-
-  useEffect(() => {
-    // Generuj náhodné číslo při načítání stránky
-    const randomNumber = getRandomInt(0, 1);
-
-    // Na základě náhodného čísla vyber jednu z fotek
-    const photoUrl =
-      randomNumber === 0
-        ? process.env.PUBLIC_URL + "Nobg1.png"
-        : process.env.PUBLIC_URL + "NoBg2Resized.png";
-
-    // Nastav vybranou fotku do stavu
-    setSelectedPhoto(photoUrl);
-  }, []); // Závislosti jsou prázdné, takže se s
 
   return (
     <div id="home" className="app__header app__flex">
@@ -67,7 +47,11 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={selectedPhoto} alt="Profile Picture" />
+        <img
+          fetchPriority="high"
+          src={images.profile}
+          alt="Profile"
+        />
 
         <motion.img
           whileInView={{ scale: [0, 1] }}

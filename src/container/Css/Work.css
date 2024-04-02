@@ -125,7 +125,7 @@
   position: relative;
   flex-direction: column;
 }
-.app__work-content h4 {
+.app__work-content h3 {
   margin-top: 1rem;
   line-height: 1.5;
 }
